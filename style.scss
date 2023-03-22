@@ -1,0 +1,135 @@
+@import "assets/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 1rem;
+}
+body {
+  font-family: $font-family;
+
+  .header {
+    .banner-wrapper {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      .nav {
+        display: flex;
+
+        ul {
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          position: absolute;
+          left: 250px;
+          padding-top: 35px;
+          margin-left: 450px;
+          gap: 38px;
+        }
+        li {
+          list-style-type: none;
+          padding: 10px;
+        }
+        a {
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: $white;
+          font-family: $font-family;
+          font-weight: $font-weight-semibold;
+        }
+        a:hover {
+          color: $brown;
+        }
+        .cart {
+          padding: 70px;
+        }
+      }
+      .banner-image {
+        object-fit: cover;
+        max-width: 100%;
+      }
+
+      .banner-text {
+        position: absolute;
+        top: 18%;
+        left: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: $white;
+
+        h1 {
+          font-size: 5rem;
+          font-weight: $font-weight-bold;
+        }
+
+        h2 {
+          padding-top: 1.5rem;
+          font-size: 1.5rem;
+          font-weight: $font-weight-regular;
+        }
+      }
+    }
+  }
+  .header .banner-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    // background: linear-gradient(
+    //   to bottom,
+    //   rgba(255, 255, 255, -0.2),
+    //   rgba(255, 255, 255, 0.7),
+    //   rgba(255, 255, 255, 1)
+    // );
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 83.65%
+    );
+  }
+  @media screen and (max-width: 768px) {
+    .header .banner-wrapper .banner-text {
+      top: 20%;
+      left: 25%;
+      color: $white;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 0.7rem;
+      }
+    }
+    .header .banner-wrapper {
+      .nav {
+        width: 670px;
+        ul {
+          top: 20px;
+          left: 90px;
+          padding-top: 5px;
+          margin-left: 250px;
+          gap: 10px;
+        }
+
+        a {
+          font-size: 0.5rem;
+          color: $white;
+        }
+        a:hover {
+          color: $brown;
+        }
+        .cart {
+          padding: 30px;
+        }
+      }
+    }
+  }
+}
