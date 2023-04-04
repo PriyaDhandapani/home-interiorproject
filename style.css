@@ -98,6 +98,7 @@ body .arrow a i {
 }
 body .card-container {
   display: flex;
+  flex-wrap: wrap;
   padding: 1rem;
   overflow: hidden;
   justify-content: space-between;
@@ -168,6 +169,64 @@ body .card-container .card .card-info .row3 button:hover {
 body .card-container .card .card-info h6 {
   color: #292929;
   font-size: 0.8rem;
+}
+body .gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 76px;
+  line-height: 32px;
+}
+body .gallery-container h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.6rem;
+}
+body .gallery-container h6 {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.7rem;
+}
+body .gallery-container .img-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body .gallery-container .img-grid div {
+  position: relative;
+  padding: 10px;
+}
+body .gallery-container .img-grid div img {
+  flex: 1;
+  margin: 10px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .gallery-container .img-grid div a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f9f9f9;
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: 600;
+}
+body .gallery-container .img-grid div a:hover {
+  color: #dcb47a;
+}
+body .gallery-container .img-grid .img1,
+body .gallery-container .img-grid .img4 {
+  max-height: 645px;
+}
+body .gallery-container .img-grid .img2,
+body .gallery-container .img-grid .img3 {
+  max-width: 430px;
 }
 @media screen and (max-width: 768px) {
   body .header .banner-wrapper .banner-text {
